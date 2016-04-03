@@ -221,6 +221,7 @@ all_Data.mean <- dcast(all_Data.melted, subject + activity ~ variable, mean)
 
 ##4. Appropriately labels the data set with descriptive variable names.
 leading t or f is based on time or frequency measurements.
+```
 1. Body = related to body movement.
 2. Gravity = acceleration of gravity
 3. Acc = accelerometer measurement
@@ -228,3 +229,4 @@ leading t or f is based on time or frequency measurements.
 5. Jerk = sudden movement acceleration
 6. Mag = magnitude of movement
 mean and SD are calculated for each subject for each activity for each mean and SD measurements. The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
+```
