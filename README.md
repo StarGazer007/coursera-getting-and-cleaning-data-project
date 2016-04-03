@@ -21,4 +21,4 @@ The end result is shown in the file tidy.txt.
 
 ##Additional Information
 
-You can find additional information about the variables, data and transformations in the  [CookBook.MD](https://github.com/StarGazer007/coursera-getting-and-cleaning-data-project/blob/master/CodeBook.MD)file.
+You can find additional information about the variables, data and transformations in the  [CookBook.MD](https://github.com/StarGazer007/coursera-getting-and-cleaning-data-project/blob/master/CodeBook.MD) file.
