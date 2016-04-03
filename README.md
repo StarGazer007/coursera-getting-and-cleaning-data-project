@@ -16,7 +16,7 @@ This is the course project for the Getting and Cleaning Data Coursera course. Th
 6. Converts the activity and subject columns into factors
 7. Creates a tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
 
-The end result is shown in the file [tidydata.txt](https://github.com/StarGazer007/coursera-getting-and-cleaning-data-project/blob/master/tidydata.txt).
+The end result is shown in the file [tidy_data.txt](https://github.com/StarGazer007/coursera-getting-and-cleaning-data-project/blob/master/tidy_data.txt).
 
 
 ##Additional Information
