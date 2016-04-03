@@ -235,6 +235,6 @@ mean and SD are calculated for each subject for each activity for each mean and 
 
 ```
 #Create the tidy.txt file
-write.table(all_Data.mean,"tidy.txt", row.names = FALSE, quote = FALSE)
+write.table(all_Data.mean,"tidy_data.txt", row.names = FALSE, quote = FALSE)
 
 ```
