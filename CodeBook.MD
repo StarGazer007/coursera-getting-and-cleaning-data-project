@@ -131,9 +131,10 @@ Description of abbreviations of measurements
   6             LAYING : subject was laying down during the test
 
 ##Download the Data
-...
+```
 ###set filename variable and check if the file exists
 filename <-"getdata_dataset.zip"
+
 
 ## if file does not exist download the data zip file https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 if (!file.exists(filename)){
@@ -141,7 +142,7 @@ if (!file.exists(filename)){
   download.file(fileURL, filename)
   
 }
-...
+```
 
 ##Load Required packages &Clean up workspace
 
