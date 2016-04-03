@@ -122,13 +122,15 @@ Description of abbreviations of measurements
 * `fBodyBodyGyroJerkMagMeanFreq`
 
 ## Activity Labels
- V1                 V2
-  1            WALKING : subject was walking during the test
-  2   WALKING_UPSTAIRS : subject was walking up a staircase during the test
-  3 WALKING_DOWNSTAIRS : subject was walking down a staircase during the test
-  4            SITTING : subject was sitting during the test
-  5           STANDING : subject was standing during the test
-  6             LAYING : subject was laying down during the test
+```
+V1                 V2
+1            WALKING : subject was walking during the test
+2   WALKING_UPSTAIRS : subject was walking up a staircase during the test
+3 WALKING_DOWNSTAIRS : subject was walking down a staircase during the test
+4            SITTING : subject was sitting during the test
+5           STANDING : subject was standing during the test
+6             LAYING : subject was laying down during the test
+```
 
 ##Download the Data
 ```
@@ -146,12 +148,12 @@ if (!file.exists(filename)){
 
 ##Load Required packages &Clean up workspace
 
-...
+```
 rm(list=ls())
 
 ##load library
 library(reshape2)
-...
+```
 
 ###Files in folder ‘UCI HAR Dataset’ that will be used are:
 
@@ -172,7 +174,7 @@ features.txt - Names of column variables in the dataTable
 activity_labels.txt - Links the class labels with their activity name.
 
 ###Read the ‘UCI HAR Dataset’ files and created data tables.
-... 
+```
 
 activity_Labels <-read.table("UCI HAR Dataset/activity_labels.txt")
 features <- read.table("UCI HAR Dataset/features.txt")
@@ -183,30 +185,30 @@ test <- read.table("UCI HAR Dataset/test/X_test.txt")[features_Wanted]
 test_Activities <- read.table ("UCI HAR Dataset/test/Y_test.txt")
 test_Subjects <- read.table ("UCI HAR Dataset/test/subject_test.txt")
 
-...
+```
 
 ###1.Merges the training and the test sets to create one data set.
 
-...
+```
 
 # merge datasets and add labels
 all_Data <- rbind(train_data, test_data)
 colnames(all_Data) <- c("subject", "activity", features_Wanted.names)
-...
+```
 
 ### 2.Extracts only the measurements on the mean and standard deviation for each measurement.
-...
+```
 # Extract only the data on mean and standard deviation
 features_Wanted <- grep(".*mean.*|.*std.*", features[,2])
 features_Wanted.names <- features[features_Wanted,2]
 features_Wanted.names = gsub('-mean', 'Mean', features_Wanted.names)
 features_Wanted.names = gsub('-std', 'Std', features_Wanted.names)
 features_Wanted.names <- gsub('[-()]', '', features_Wanted.names)
-...
+```
 
 
 #Uses descriptive activity names to name the activities in the data set
-...
+```
 # turn activities and subjects into factors
 all_Data$activity <- factor(all_Data$activity, levels = activity_Labels[,1], labels = activity_Labels[,2])
 all_Data$subject <- as.factor(all_Data$subject)
@@ -215,7 +217,7 @@ all_Data$subject <- as.factor(all_Data$subject)
 all_Data.melted <- melt(all_Data, id = c("subject", "activity"))
 all_Data.mean <- dcast(all_Data.melted, subject + activity ~ variable, mean)
 
-...
+```
 
 ##4. Appropriately labels the data set with descriptive variable names.
 leading t or f is based on time or frequency measurements.
