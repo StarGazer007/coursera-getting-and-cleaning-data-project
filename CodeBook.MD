@@ -187,7 +187,7 @@ test_Subjects <- read.table ("UCI HAR Dataset/test/subject_test.txt")
 
 ```
 
-###1.Merges the training and the test sets to create one data set.
+##1.Merges the training and the test sets to create one data set.
 
 ```
 
@@ -196,7 +196,7 @@ all_Data <- rbind(train_data, test_data)
 colnames(all_Data) <- c("subject", "activity", features_Wanted.names)
 ```
 
-### 2.Extracts only the measurements on the mean and standard deviation for each measurement.
+## 2.Extracts only the measurements on the mean and standard deviation for each measurement.
 ```
 # Extract only the data on mean and standard deviation
 features_Wanted <- grep(".*mean.*|.*std.*", features[,2])
@@ -229,4 +229,12 @@ leading t or f is based on time or frequency measurements.
 5. Jerk = sudden movement acceleration
 6. Mag = magnitude of movement
 mean and SD are calculated for each subject for each activity for each mean and SD measurements. The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
+```
+
+##5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+```
+#Create the tidy.txt file
+write.table(all_Data.mean,"tidy.txt", row.names = FALSE, quote = FALSE)
+
 ```
