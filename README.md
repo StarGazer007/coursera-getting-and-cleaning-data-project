@@ -1,5 +1,10 @@
 # Getting and Cleaning Data - Course Project
 
+Lisa Rodgers
+
+Repo for the submission of the course project for the Johns Hopkins Getting and Cleaning Data course.
+
+##Overview
 
 This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
@@ -12,3 +17,8 @@ This is the course project for the Getting and Cleaning Data Coursera course. Th
 7. Creates a tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
 
 The end result is shown in the file tidy.txt.
+
+
+##Additional Information
+
+You can find additional information about the variables, data and transformations in the  [CookBook.MD](https://github.com/StarGazer007/coursera-getting-and-cleaning-data-project/blob/master/CodeBook.MD)file.
