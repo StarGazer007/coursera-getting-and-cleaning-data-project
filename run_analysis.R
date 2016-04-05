@@ -1,3 +1,11 @@
+##########################################################################################################
+## Coursera Getting and Cleaning Data Course Project
+## Lisa Rodgers
+## 2016-04-03
+
+# Clean up workspace
+rm(list=ls())
+
 ##load library
 library(reshape2)
 
